@@ -27,6 +27,6 @@ Este projeto tem como objetivo facilitar a gestão do campeonato, oferecendo fer
 
 - Commit suas mudanças: git commit -m 'feat: minha nova feature'
 
-Faça um push para a sua branch: git push origin minha-feature
+- Faça um push para a sua branch: git push origin minha-feature
 
-Abra um Pull Request
+- Abra um Pull Request
