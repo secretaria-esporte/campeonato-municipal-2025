@@ -318,7 +318,7 @@ header {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .highlights .swiper .scoreboard {
@@ -333,7 +333,7 @@ header {
 
 .highlights .swiper .scoreboard p {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .card__button {
@@ -483,6 +483,10 @@ header {
     font-size: 0.8rem;
 }
 
+.container__classification form label {
+    font-size: 0.9rem;
+}
+
 .container__classification select {
     background-color: var(--color-primary);
     color: var(--color-gray-100);
@@ -609,7 +613,7 @@ header {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .firstPhase__container .scoreboard {
@@ -624,7 +628,7 @@ header {
 
 .firstPhase__container .scoreboard p {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0.5rem 0 0.5rem;
 }
 
@@ -702,7 +706,7 @@ header {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .quarters__container .scoreboard {
@@ -840,7 +844,7 @@ li.mixitup-control-active {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .semifinais__container .scoreboard {
@@ -855,7 +859,7 @@ li.mixitup-control-active {
 
 .semifinais__container .scoreboard p {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0.5rem 0 0.5rem;
 }
 
@@ -933,7 +937,7 @@ li.mixitup-control-active {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .final__container .scoreboard {
@@ -948,7 +952,7 @@ li.mixitup-control-active {
 
 .final__container .scoreboard p {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0.5rem 0 0.5rem;
 }
 
