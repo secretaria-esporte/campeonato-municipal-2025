@@ -86,7 +86,9 @@ fetch('./json-files/firstPhase.json')
           </div>
 
           <div class='card__button'>
-            <button class='btn'>Grupo ${jogo.grupo}</button>
+            <button class='btn'>
+              <a href="#classification">Grupo ${jogo.grupo}</a>
+            </button>
           </div>
         </div>
       `;
