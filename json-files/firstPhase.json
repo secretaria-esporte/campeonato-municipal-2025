@@ -11,8 +11,8 @@
         "equipe_visitante": "LAGOA DO MATO",
         "escudo_mandante": "vilanova.png",
         "escudo_visitante": "lagoadomato.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "5",
+        "gols_visitante": "0",
         "partida": "VILA NOVA x LAGOA DO MATO"
     },
     {
@@ -27,8 +27,8 @@
         "equipe_visitante": "LIVERPOOL",
         "escudo_mandante": "atleticoportela.png",
         "escudo_visitante": "liverpool.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "3",
+        "gols_visitante": "0",
         "partida": "ATLÉTICO PORTELA x LIVERPOOL"
     },
     {
