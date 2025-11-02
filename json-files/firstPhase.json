@@ -43,8 +43,8 @@
         "equipe_visitante": "GAMA",
         "escudo_mandante": "riachodavarzea.png",
         "escudo_visitante": "gama.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "1",
+        "gols_visitante": "2",
         "partida": "RIACHO DA VÁRZEA x GAMA"
     },
     {
@@ -59,8 +59,8 @@
         "equipe_visitante": "PODER NEGRO",
         "escudo_mandante": "24horas.png",
         "escudo_visitante": "podernegro.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "2",
         "partida": "24 HORAS X PODER NEGRO"
     },
     {
