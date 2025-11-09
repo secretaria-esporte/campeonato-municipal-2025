@@ -75,8 +75,8 @@
         "equipe_visitante": "ILHA DA ROÇA",
         "escudo_mandante": "duzome.png",
         "escudo_visitante": "ilhadaroca.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "2",
+        "gols_visitante": "1",
         "partida": "DUZOME X ILHA DA ROÇA"
     },
     {
@@ -91,8 +91,8 @@
         "equipe_visitante": "C. A. RUBI",
         "escudo_mandante": "sportmilan.png",
         "escudo_visitante": "rubi.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "2",
         "partida": "SPORT MILAN X C. A. RUBI"
     },
     {
