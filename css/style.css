@@ -1,6 +1,4 @@
-/*=============== GOOGLE FONTS (POPPINS & OUTFIT) ===============*/
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+/* ----- Reset de CSS e variáveis globais -----*/
 * {
     margin: 0;
     padding: 0;
@@ -60,10 +58,6 @@ body {
     color: var(--color-gray-800);
     line-height: 1.7;
     font-weight: 300;
-}
-
-p, a {
-    font-size: 0.85rem;
 }
 
 .container {
@@ -137,8 +131,8 @@ section:nth-child(odd) {
     background: var(--color-gray-200);
 }
 
-/*=============== NAV ===============*/
-nav {
+/* ----- Nav ----- */
+.nav__main {
     background-color: var(--color-nav-bg);
     border-bottom: 1px solid var(--color-gray-300);
     display: grid;
@@ -188,8 +182,8 @@ nav {
     cursor: pointer;
 }
 
-/*=============== HEADER ===============*/
-header {
+/* ----- Header ----- */
+.header {
     display: grid;
     place-items: center;
     min-height: 100vh;
@@ -256,7 +250,7 @@ header {
     transform: translate(-0.5rem);
 }
 
-/*=============== HIGHLIGHTS ===============*/
+/* ----- Highlights ----- */
 .highlights__content {
     text-align: center;
     margin-top: 2rem;
@@ -314,7 +308,7 @@ header {
     width: 8rem;
 }
 
-.highlights .swiper .team__container p {
+.highlights .swiper .team__container figcaption {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
@@ -327,13 +321,15 @@ header {
     align-items: center;
 }
 
-.highlights .swiper .scoreboard h2 {
+.highlights .swiper .scoreboard .score {
     font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.highlights .swiper .scoreboard p {
+.highlights .swiper .scoreboard .divider {
     font-size: 1rem;
     font-weight: 600;
+    margin: 0 0.5rem;
 }
 
 .card__button {
@@ -382,9 +378,9 @@ header {
 .swiper-pagination-bullet {
     background: var(--color-primary);
 }
-  
-/*=============== CLIENTS ===============*/
-#clients {
+
+/* ----- Supporters ----- */
+.clients {
     text-align: center;
 }
 
@@ -427,7 +423,7 @@ header {
     width: 300px;
 }
 
-/*=============== DOWNLOADS ===============*/
+/* ----- Downloads ----- */
 .downloads__container {
     text-align: center;
 }
@@ -454,7 +450,7 @@ header {
     margin: 0 0.5rem 0 0.5rem;
 }
 
-/*=============== CLASSIFICATION ===============*/
+/* ----- Classification / Groups ----- */
 .container__classification {
     margin-top: 3rem;
 }
@@ -519,7 +515,7 @@ header {
     border-bottom: 2px solid var(--color-primary);
 }
 
-.container__classification h3 {
+.container__classification h2 {
     margin: 2rem 0 2rem 0;
     text-align: center;
     color: var(--color-primary);
@@ -537,7 +533,7 @@ header {
     border: 0;
 }
 
-/*=============== FIRST PHASE ===============*/
+/* ----- First Phase ----- */
 .firstPhase__content {
     text-align: center;
     margin-top: 2rem;
@@ -609,10 +605,9 @@ header {
     padding: 1.2rem;
 }
 
-.firstPhase__container .team__container p {
+.firstPhase__container .team__container figcaption {
     font-size: 0.8rem;
     text-align: center;
-    text-transform: uppercase;
     font-weight: 600;
 }
 
@@ -622,17 +617,22 @@ header {
     align-items: center;
 }
 
-.firstPhase__container .scoreboard h2 {
+.firstPhase__container .scoreboard .score {
     font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.firstPhase__container .scoreboard p {
+.firstPhase__container .scoreboard .divider {
     font-size: 1rem;
     font-weight: 600;
     margin: 0 0.5rem 0 0.5rem;
 }
 
-/*=============== QUARTER FINALS ===============*/
+.firstPhase__container .card__button a {
+    margin-bottom: 1.5rem;
+}
+
+/* ----- Quarters ----- */
 .quarters__content {
     text-align: center;
     margin-top: 2rem;
@@ -686,7 +686,12 @@ header {
     font-size: 1rem;
     margin-bottom: 0.7rem;
     font-weight: 700;
-    text-transform: uppercase;
+}
+
+.quarters__container .table__title time {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
 }
 
 .quarters__container .departure__container {
@@ -702,7 +707,7 @@ header {
     padding: 1.2rem;
 }
 
-.quarters__container .team__container p {
+.quarters__container .team__container figcaption {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
@@ -715,17 +720,18 @@ header {
     align-items: center;
 }
 
-.quarters__container .scoreboard h2 {
+.quarters__container .scoreboard .score {
     font-size: 2.5rem;
+    font-weight: 600;
 }
 
-.quarters__container .scoreboard p {
+.quarters__container .scoreboard .divider {
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 0.5rem 0 0.5rem;
 }
 
-/*=============== SEMIFINAIS ===============*/
+/* ----- Semifinais ----- */
 .semifinais__content {
     text-align: center;
     margin-top: 2rem;
@@ -824,7 +830,12 @@ li.mixitup-control-active {
     font-size: 1rem;
     margin-bottom: 0.7rem;
     font-weight: 700;
-    text-transform: uppercase;
+}
+
+.semifinais__container .table__title time {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
 }
 
 .semifinais__container .departure__container {
@@ -840,7 +851,7 @@ li.mixitup-control-active {
     padding: 1.2rem;
 }
 
-.semifinais__container .team__container p {
+.semifinais__container .team__container figcaption {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
@@ -853,17 +864,17 @@ li.mixitup-control-active {
     align-items: center;
 }
 
-.semifinais__container .scoreboard h2 {
+.semifinais__container .scoreboard .score {
     font-size: 2.5rem;
 }
 
-.semifinais__container .scoreboard p {
+.semifinais__container .scoreboard .divider {
     font-size: 1rem;
     font-weight: 600;
     margin: 0 0.5rem 0 0.5rem;
 }
 
-/*=============== FINAL ===============*/
+/* ----- Final ----- */
 .final__content {
     text-align: center;
     margin-top: 2rem;
@@ -899,7 +910,7 @@ li.mixitup-control-active {
     text-align: center;
 }
 
-.final__container:hover {
+.final__container .cards .container__games:hover {
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
 }
 
@@ -917,7 +928,12 @@ li.mixitup-control-active {
     font-size: 1rem;
     margin-bottom: 0.7rem;
     font-weight: 700;
-    text-transform: uppercase;
+}
+
+.final__container .table__title time {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    font-weight: 700;
 }
 
 .final__container .departure__container {
@@ -933,7 +949,7 @@ li.mixitup-control-active {
     padding: 1.2rem;
 }
 
-.final__container .team__container p {
+.final__container .team__container figcaption {
     font-size: 0.8rem;
     text-align: center;
     text-transform: uppercase;
@@ -946,24 +962,24 @@ li.mixitup-control-active {
     align-items: center;
 }
 
-.final__container .scoreboard h2 {
+.final__container .scoreboard .score {
     font-size: 2.5rem;
 }
 
-.final__container .scoreboard p {
+.final__container .scoreboard .divider {
     font-size: 1rem;
     font-weight: 600;
     margin: 0 0.5rem 0 0.5rem;
 }
 
-/*=============== FOOTER ===============*/
+/* ----- Footer ----- */
 footer {
     background: hsl(var(--primary-hue), 5%, 5%);
     padding-top: 7rem;
     border-top: 2px solid hsl(var(--primary-hue), 5%, 25%);
 }
 
-.footer__menu {
+.footer__menu ul {
     display: flex;
     gap: 3rem;
     justify-content: center;
@@ -978,7 +994,7 @@ footer {
     color: #fff;
 }
 
-.footer__socials {
+.footer__socials ul {
     width: fit-content;
     display: flex;
     gap: 1.5rem;
@@ -997,9 +1013,6 @@ footer {
 .footer__socials a:hover {
     background: var(--color-primary);
     color: #fff;
-}
-
-.footer__socials a:hover {
     opacity: 0.7;
     transform: translateY(-0.5rem);
 }
@@ -1011,6 +1024,7 @@ footer {
     padding: 1.5rem 0;
 }
 
+/* ===== Media Queries: Responsive Layout ===== */
 @media (max-width: 768px) {
     h1 {
         font-size: 1.8rem;
@@ -1045,7 +1059,7 @@ footer {
 
     .nav__menu li {
         width: 100%;
-   }
+    }
 
    .nav__menu li a {
         background: var(--color-gray-200);
@@ -1055,90 +1069,90 @@ footer {
         border-top: 1px solid var(--color-gray-300);
         text-align: center;
         box-shadow: -2rem 5rem 5rem rgba(0, 0, 0, 0.3);
-   }
+    }
 
-   .nav__toggle-open, .nav__toggle-close {
+    .nav__toggle-open, .nav__toggle-close {
         display: inline-block;
         background: transparent;
         font-size: 1.8rem;
         color: var(--color-gray-900);
-   }
+    }
 
    .nav__toggle-close {
         display: none;
-   }
+    }
 
    .nav__buttons {
         display: flex;
         align-items: center;
         gap: 2.5rem;
-   }
+    }
 
    .nav__menu li {
         transform: rotateX(90deg);
         opacity: 0;
         animation: navKey 500ms ease-in-out forwards;
         transform-origin: top;
-   }
+    }
 
    .nav__menu li:nth-child(2) {
         animation-delay: 200ms;
-   }
+    }
 
    .nav__menu li:nth-child(3) {
         animation-delay: 400ms;
-   }
+    }
 
    .nav__menu li:nth-child(4) {
         animation-delay: 600ms;
-   }
+    }
 
    .nav__menu li:nth-child(5) {
         animation-delay: 800ms;
-   }
+    }
 
    .nav__menu li:nth-child(6) {
         animation-delay: 1000ms;
-   }
+    }
 
    @keyframes navKey {
     to {
         transform: rotateX(0deg);
         opacity: 1;
     }
-   }
+    }
 
-   header {
-    height: 115vh;
-   }
+    .header {
+        height: 115vh;
+    }
 
    .header__content {
-    width: var(--container-width-sm);
-    padding-bottom: 3rem;
-   }
+        width: var(--container-width-sm);
+        padding-bottom: 3rem;
+    }
 
    .header__socials {
-    display: none;
-   }
+        display: none;
+    }
 
    .header__image {
-    width: 40vh;
-    aspect-ratio: 4/5;
-   }
+        width: 40vh;
+        aspect-ratio: 4/5;
+    }
 
    .header__cta a {
-    font-size: 0.8rem;
-   }
+        font-size: 0.8rem;
+    }
 
    .highlights__content {
-    width: var(--container-width-sm);
-   }
+        width: var(--container-width-sm);
+    }
 
    .highlights .swiper .team__container img {
         width: 5rem;    
     }
 
-    .highlights .swiper .team__container p {
+    .highlights .swiper .team__container figcaption {
         font-size: 0.8rem;    
     }
 
@@ -1243,12 +1257,11 @@ footer {
         width: 5rem;
     }
 
-   .footer__menu {
-    flex-direction: column;
-    grid-area: 1.6rem;
-    align-items: center;
+   .footer__menu ul {
+        flex-direction: column;
+        grid-area: 1.6rem;
+        align-items: center;
    }
-
 }
 
 @media (min-width: 768px) and (max-width: 1200px) {

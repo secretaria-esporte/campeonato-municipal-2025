@@ -1,124 +1,58 @@
-/*=============== CLASSIFICATION JS ===============*/
-let tabelaClassificacao = document.querySelector('.classification__table');
-let line = document.querySelectorAll('.body__classification tr');
-
-exibirTabelaClassificacao('A');
-
-async function exibirTabelaClassificacao(letterGroup) {
-    // Atualizar letra do grupo no index.html
-    document.querySelector('.group__letter').innerHTML = letterGroup;
-
-    try {
-        const res = await fetch(`./json-files/group${letterGroup}.json`);
-        if (!res.ok) throw new Error('Erro ao carregar arquivo JSON');
-
-        const data = await res.json();
-
-        data.sort((a, b) => a.posicao - b.posicao);
-
-        data.forEach((equipe, indice) => {
-            if (line[indice]) {
-                line[indice].innerHTML = `
-                    <td>${equipe.posicao}</td>
-                    <td>${equipe.equipe}</td>
-                    <td>${equipe.pontos}</td>
-                    <td>${equipe.jogos}</td>
-                    <td>${equipe.vitorias}</td>
-                    <td>${equipe.empates}</td>
-                    <td>${equipe.derrotas}</td>
-                    <td>${equipe.gols_pro}</td>
-                    <td>${equipe.gols_contra}</td>
-                    <td>${equipe.saldo_de_gols}</td>
-                `;
-            }
-        });
-    } catch (error) {
-        console.error(error);
-    }
-}
-
-// Controlar a escolha da letra do grupo para exibir na tabela de classificação
-let selectLetra = document.querySelector('.select__group');
-
-selectLetra.addEventListener('change', (event) => {
-    exibirTabelaClassificacao(event.target.value);
-});
-
-/*=============== FIRST PHASE JS ===============*/
-let tabelaJogos = document.querySelector('.table__games');
-
-fetch('./json-files/firstPhase.json')
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Erro ao carregar arquivo JSON');
-    }
-    return response.json();
-  })
+// Renderiza os jogos realizados a partir do JSON highlights
+fetch('./json-files/highlights.json')
+  .then(res => res.json())
   .then(data => {
-    data.forEach(jogo => {
-      let linha = document.createElement('div');
-      linha.classList.add('line-game'); // só um exemplo de classe para estilizar
-      tabelaJogos.appendChild(linha);
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
 
-      linha.innerHTML = `
-        <div class="container__games">
-          <div class='table__title'>
-            <img src="images/logo.png" alt="Campeonato Municipal 2025">
+    data.forEach(jogo => {
+      const slide = document.createElement('div');
+      slide.classList.add('swiper-slide');
+      slide.innerHTML = `
+        <article>
+          <div class="highlights__image">
+            <img class="card__logo" src="images/logo.png" alt="Logo do Campeonato Municipal 2025">
+          </div>
+          <div class="table__title">
             <h2>Campeonato Municipal 2025</h2>
             <p>${jogo.estadio} - ${jogo.diaSemana}</p>
             <h3>${jogo.data} - ${jogo.hora}</h3>
           </div>
-
           <div class="departure__container">
-            <div class="team__container">
+            <figure class="team__container">
               <img src="images/teams/${jogo.escudo_mandante}" alt="Escudo ${jogo.equipe_mandante}">
-              <p>${jogo.equipe_mandante}</p>
-            </div>
-            <div class='scoreboard'>
-              <h2>${jogo.gols_mandante}</h2>
-              <p>X</p>
-              <h2>${jogo.gols_visitante}</h2>
-            </div>
-            <div class="team__container">
+              <figcaption>${jogo.equipe_mandante}</figcaption>
+            </figure>
+            <figure class="scoreboard" role="status" aria-live="polite">
+              <span class="score">${jogo.gols_mandante}</span>
+              <span class="divider">X</span>
+              <span class="score">${jogo.gols_visitante}</span>
+            </figure>
+            <figure class="team__container">
               <img src="images/teams/${jogo.escudo_visitante}" alt="Escudo ${jogo.equipe_visitante}">
-              <p>${jogo.equipe_visitante}</p>
-            </div>
+              <figcaption>${jogo.equipe_visitante}</figcaption>
+            </figure>
           </div>
-
-          <div class='card__button'>
-            <button class='btn'>
-              <a href="#classification">Grupo ${jogo.grupo}</a>
-            </button>
+          <div class="card__button">
+            <a href="#classification" class="btn primary">Grupo ${jogo.grupo}</a>
           </div>
-        </div>
+        </article>
       `;
+      swiperWrapper.appendChild(slide);
+    });
+
+    // Inicializar o Swiper depois de criar todos os slides
+    new Swiper('.swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: data.length > 1, // loop só se houver mais de 1 slide
+      pagination: { el: '.swiper-pagination', clickable: true },
+      autoplay: { delay: 5000, disableOnInteraction: false },
     });
   })
-  .catch(error => {
-    console.error('Erro:', error);
-  });
+  .catch(err => console.error('Erro ao carregar highlights.json:', err));
 
 
-/*=============== SWIPER ===============*/
-const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    spaceBetween: 30,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-    },
-
-    breakpoints: {
-        600: {
-            slidesPerView: 1
-        }, 
-        1024: {
-            slidesPerView: 2
-        }
-    }
-});
-
-/*=============== NAV TOGGLE (small screens) ===============*/
+/* ----- Menu de Navegação (Telas pequenas) ----- */
 const navMenu = document.querySelector('.nav__menu');
 const navOpenBtn = document.querySelector('.nav__toggle-open');
 const navCloseBtn = document.querySelector('.nav__toggle-close');
@@ -144,11 +78,11 @@ const closeNavResize = () => {
 navOpenBtn.addEventListener('click', openNavHandler);
 navCloseBtn.addEventListener('click', closeNavHandler);
 
-// Close nav menu on click of nav link on small screens
+// Fechar menu ao clicar no link em telas pequenas
 function updateNavListeners() {
     const navItems = navMenu.querySelectorAll('a');
     navItems.forEach(item => {
-        item.removeEventListener('click', closeNavHandler); // remove first to avoid duplicates
+        item.removeEventListener('click', closeNavHandler); // Remover o primeiro para evitar duplicatas
         if (window.innerWidth < 768) {
             item.addEventListener('click', closeNavHandler);
         }
@@ -166,7 +100,7 @@ window.addEventListener('resize', () => {
     }
 });
 
-/*=============== TOGGLE THEME (light & dark mode) ===============*/
+/* ----- Alternar tema (modo claro e escuro) ----- */
 const themeBtn = document.querySelector('.nav__theme-btn');
 
 const images = [
@@ -221,10 +155,10 @@ function applyTheme(theme) {
 
   // Atualiza o ícone do botão de tema
   themeBtn.innerHTML = isDark
-    ? "<i class='uil uil-sun'></i>"
-    : "<i class='uil uil-moon'></i>";
+    ? "<i class='i uil:sun' aria-hidden='true'></i>"
+    : "<i class='i uil:moon' aria-hidden='true'></i>";
 
-  // Acessibilidade (opcional)
+  // Acessibilidade
   themeBtn.setAttribute(
     'aria-label',
     isDark ? 'Ativar modo claro' : 'Ativar modo escuro'
@@ -246,7 +180,107 @@ window.addEventListener('load', () => {
   applyTheme(savedTheme);
 });
 
-/*=============== MIXTUP ===============*/
+/* ----- Classificação / Grupos ----- */
+let tabelaClassificacao = document.querySelector('.classification__table');
+let line = document.querySelectorAll('.body__classification tr');
+
+exibirTabelaClassificacao('A');
+
+async function exibirTabelaClassificacao(letterGroup) {
+    // Atualizar letra do grupo no index.html
+    document.querySelector('.group__letter').innerHTML = letterGroup;
+
+    try {
+        const res = await fetch(`./json-files/group${letterGroup}.json`);
+        if (!res.ok) throw new Error('Erro ao carregar arquivo JSON');
+
+        const data = await res.json();
+
+        data.sort((a, b) => a.posicao - b.posicao);
+
+        data.forEach((equipe, indice) => {
+            if (line[indice]) {
+                line[indice].innerHTML = `
+                    <td>${equipe.posicao}</td>
+                    <td>${equipe.equipe}</td>
+                    <td>${equipe.pontos}</td>
+                    <td>${equipe.jogos}</td>
+                    <td>${equipe.vitorias}</td>
+                    <td>${equipe.empates}</td>
+                    <td>${equipe.derrotas}</td>
+                    <td>${equipe.gols_pro}</td>
+                    <td>${equipe.gols_contra}</td>
+                    <td>${equipe.saldo_de_gols}</td>
+                `;
+            }
+        });
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+// Controlar a escolha da letra do grupo para exibir na tabela de classificação
+let selectLetra = document.querySelector('.select__group');
+
+selectLetra.addEventListener('change', (event) => {
+    exibirTabelaClassificacao(event.target.value);
+});
+
+/* ----- Primeira Fase / Jogos ----- */
+let tabelaJogos = document.querySelector('.table__games');
+
+fetch('./json-files/firstPhase.json')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Erro ao carregar arquivo JSON');
+    }
+    return response.json();
+  })
+  .then(data => {
+    data.forEach(jogo => {
+      let linha = document.createElement('div');
+      linha.classList.add('line-game'); // classe para estilização
+      tabelaJogos.appendChild(linha);
+
+      linha.innerHTML = `
+        <article class="container__games" aria-labelledby="game-title-${jogo.id}">
+          <header class='table__title' id="game-title-${jogo.id}">
+            <img src="images/logo.png" alt="Campeonato Municipal 2025">
+            <h2>Campeonato Municipal 2025</h2>
+            <p>${jogo.estadio} - ${jogo.diaSemana}</p>
+            <h3><time datetime="${jogo.dataISO}T${jogo.hora}">${jogo.data} - ${jogo.hora}</time></h3>
+          </header>
+
+          <div class="departure__container">
+            <figure class="team__container">
+              <img src="images/teams/${jogo.escudo_mandante}" alt="Escudo ${jogo.equipe_mandante}">
+              <figcaption>${jogo.equipe_mandante}</figcaption>
+            </figure>
+
+            <figure class="scoreboard" role="status" aria-live="polite">
+                <span class="score">${jogo.gols_mandante}</span>
+                <span class="divider">X</span>
+                <span class="score">${jogo.gols_visitante}</span>
+            </figure>
+
+            <figure class="team__container">
+              <img src="images/teams/${jogo.escudo_visitante}" alt="Escudo ${jogo.equipe_visitante}">
+              <figcaption>${jogo.equipe_visitante}</figcaption>
+            </figure>
+          </div>
+
+          <div class='card__button'>
+            <a href="#classification" class="btn primary" aria-label="Ir para o Grupo ${jogo.grupo}">Grupo ${jogo.grupo}</a>
+          </div>
+        </article>
+      `;
+    });
+  })
+  .catch(error => {
+    console.error('Erro:', error);
+  });
+
+/* ----- Mixtup ----- */
 const containerEl = document.querySelector('.semifinais__container');
 var mixer = mixitup(containerEl, {
     animation: {

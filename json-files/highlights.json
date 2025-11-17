@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "data": "26/10",
+    "dataISO": "2025-10-26",
+    "hora": "16:00",
+    "estadio": "Estádio Municipal",
+    "diaSemana": "Domingo",
+    "grupo": "A",
+    "equipe_mandante": "Vila Nova",
+    "escudo_mandante": "vilanova.png",
+    "gols_mandante": 5,
+    "equipe_visitante": "Lagoa do Mato",
+    "escudo_visitante": "lagoadomato.png",
+    "gols_visitante": 0
+  },
+  {
+    "id": 2,
+    "data": "26/10",
+    "dataISO": "2025-10-26",
+    "hora": "18:00",
+    "estadio": "Estádio Municipal",
+    "diaSemana": "Domingo",
+    "grupo": "B",
+    "equipe_mandante": "Atlético Portela",
+    "escudo_mandante": "atleticoportela.png",
+    "gols_mandante": 3,
+    "equipe_visitante": "Liverpool",
+    "escudo_visitante": "liverpool.png",
+    "gols_visitante": 0
+  },
+  {
+    "id": 3,
+    "data": "02/11",
+    "dataISO": "2025-11-02",
+    "hora": "16:00",
+    "estadio": "Estádio Municipal",
+    "diaSemana": "Domingo",
+    "grupo": "C",
+    "equipe_mandante": "Riacho da Várzea",
+    "escudo_mandante": "riachodavarzea.png",
+    "gols_mandante": 1,
+    "equipe_visitante": "Gama",
+    "escudo_visitante": "gama.png",
+    "gols_visitante": 2
+  },
+  {
+    "id": 3,
+    "data": "02/11",
+    "dataISO": "2025-11-02",
+    "hora": "18:00",
+    "estadio": "Estádio Municipal",
+    "diaSemana": "Domingo",
+    "grupo": "A",
+    "equipe_mandante": "24 Horas",
+    "escudo_mandante": "podernegro.png",
+    "gols_mandante": 0,
+    "equipe_visitante": "Poder Negro",
+    "escudo_visitante": "podernegro.png",
+    "gols_visitante": 2
+  }
+]
