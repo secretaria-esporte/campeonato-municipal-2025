@@ -171,8 +171,8 @@
         "equipe_visitante": "LIVERPOOL",
         "escudo_mandante": "ilhadaroca.png",
         "escudo_visitante": "liverpool.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "6",
         "partida": "ILHA DA ROÇA X LIVERPOOL"
     },
     {
@@ -187,8 +187,8 @@
         "equipe_visitante": "GAMA",
         "escudo_mandante": "rubi.png",
         "escudo_visitante": "gama.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "2",
         "partida": "C. A. RUBI X GAMA"
     },
     {
