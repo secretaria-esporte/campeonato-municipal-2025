@@ -58,5 +58,20 @@
     "equipe_visitante": "Poder Negro",
     "escudo_visitante": "podernegro.png",
     "gols_visitante": 2
+  },
+  {
+    "id": 4,
+    "data": "07/12",
+    "dataISO": "2025-12-07",
+    "hora": "16:00",
+    "estadio": "Estádio Municipal",
+    "diaSemana": "Domingo",
+    "grupo": "A",
+    "equipe_mandante": "Poder Negro",
+    "escudo_mandante": "podernegro.png",
+    "gols_mandante": "",
+    "equipe_visitante": "Vila Nova",
+    "escudo_visitante": "vilanova.png",
+    "gols_visitante": ""
   }
 ]
