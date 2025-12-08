@@ -203,8 +203,8 @@
         "equipe_visitante": "VILA NOVA",
         "escudo_mandante": "podernegro.png",
         "escudo_visitante": "vilanova.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "3",
+        "gols_visitante": "1",
         "partida": "PODER NEGRO X VILA NOVA"
     },
     {
@@ -219,8 +219,8 @@
         "equipe_visitante": "ATLÉTICO PORTELA",
         "escudo_mandante": "ilhadaroca.png",
         "escudo_visitante": "atleticoportela.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "6",
         "partida": "ILHA DA ROÇA X ATLÉTICO PORTELA"
     },
     {

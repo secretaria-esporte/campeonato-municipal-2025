@@ -69,9 +69,9 @@
     "grupo": "A",
     "equipe_mandante": "Poder Negro",
     "escudo_mandante": "podernegro.png",
-    "gols_mandante": "",
+    "gols_mandante": 3,
     "equipe_visitante": "Vila Nova",
     "escudo_visitante": "vilanova.png",
-    "gols_visitante": ""
+    "gols_visitante": 1
   }
 ]
