@@ -235,8 +235,8 @@
         "equipe_visitante": "RIACHO DA VÁRZEA",
         "escudo_mandante": "rubi.png",
         "escudo_visitante": "riachodavarzea.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "4",
         "partida": "C. A. RUBI X RIACHO DA VÁRZEA"
     },
     {
@@ -251,8 +251,8 @@
         "equipe_visitante": "24 HORAS",
         "escudo_mandante": "lagoadomato.png",
         "escudo_visitante": "24horas.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "6",
         "partida": "LAGOA DO MATO X 24 HORAS"
     },
     {
