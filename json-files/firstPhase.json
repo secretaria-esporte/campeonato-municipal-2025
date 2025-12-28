@@ -267,8 +267,8 @@
         "equipe_visitante": "DUZOME",
         "escudo_mandante": "liverpool.png",
         "escudo_visitante": "duzome.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "0",
+        "gols_visitante": "3",
         "partida": "LIVERPOOL x DUZOME"
     },
     {
@@ -283,8 +283,8 @@
         "equipe_visitante": "SPORT MILAN",
         "escudo_mandante": "gama.png",
         "escudo_visitante": "sportmilan.png",
-        "gols_mandante": "",
-        "gols_visitante": "",
+        "gols_mandante": "3",
+        "gols_visitante": "0",
         "partida": "GAMA X SPORT MILAN"
     }
 ]
