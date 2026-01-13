@@ -33,7 +33,7 @@ fetch('./json-files/highlights.json')
             </figure>
           </div>
           <div class="card__button">
-            <a href="#classification" class="btn primary">Grupo ${jogo.grupo}</a>
+            <a href="#classification" class="btn primary">${jogo.info_partida}</a>
           </div>
         </article>
       `;
