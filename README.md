@@ -9,7 +9,7 @@ Este projeto tem como objetivo facilitar a gestão do campeonato, oferecendo fer
 
 - Acompanhamento de resultados em tempo real
 
-- Classificação e estatísticas
+- Classificação e estatísticas 
 
 <h1>💻 Tecnologias utilizadas</h1>
 
