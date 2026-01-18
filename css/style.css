@@ -866,6 +866,7 @@ li.mixitup-control-active {
 
 .semifinais__container .scoreboard .score {
     font-size: 2.5rem;
+    font-weight: 500;
 }
 
 .semifinais__container .scoreboard .divider {
