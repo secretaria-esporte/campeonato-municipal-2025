@@ -894,6 +894,10 @@ li.mixitup-control-active {
 .final__container .cards {
     margin-top: 3rem;
 }
+
+.final__container .scoreboard .score {
+    font-weight: 500;
+}
   
 .final__container .cards .container__games{
     padding: 0.3rem;
